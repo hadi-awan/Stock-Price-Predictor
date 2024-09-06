@@ -41,19 +41,19 @@ This project implements a Long Short-Term Memory (LSTM) model to predict stock p
 The data/stock_prices.csv file can be generated using the yfinance library. You can download the data using the provided fetch_data.py script:
 
 Run this script to download data:
-   python src/utils.py
+python src/utils.py
 
 ### 2. Preprocess Data
 Run the data_preprocessing.py script to preprocess the data:
-   python src/data_preprocessing.py
+python src/data_preprocessing.py
 
 ### 3. Train the Model
 Train the LSTM model using the train.py script:
-   python src/train.py
+python src/train.py
 
 ### 4. Make Predictions
 Use the predict.py script to make predictions with the trained model:
-   python src/predict.py
+python src/predict.py
 
 ## Files
 - **data_preprocessing.py**: Contains functions to preprocess the stock price data.
