@@ -4,6 +4,15 @@
 
 This project implements a Long Short-Term Memory (LSTM) model to predict stock prices using historical data. The model is built with TensorFlow and Keras and trained on stock price data retrieved from Yahoo Finance.
 
+## Technologies Used
+
+- **TensorFlow**: For building and training the LSTM model.
+- **Keras**: High-level neural networks API.
+- **NumPy**: For numerical operations.
+- **Pandas**: For data manipulation and analysis.
+- **Yahoo Finance API (yfinance)**: For retrieving historical stock data.
+- **Matplotlib**: For data visualization.
+
 ## Project Structure
 
 - `data/`: Contains stock price data in CSV format.
@@ -47,8 +56,8 @@ Use the predict.py script to make predictions with the trained model:
    python src/predict.py
 
 ## Files
-- data_preprocessing.py: Contains functions to preprocess the stock price data.
-- model.py: Defines the LSTM model architecture.
-- train.py: Handles training of the LSTM model.
-- predict.py: Makes predictions using the trained model.
-- fetch_data.py: Downloading stock data.
+- **data_preprocessing.py**: Contains functions to preprocess the stock price data.
+- **model.py**: Defines the LSTM model architecture.
+- **train.py**: Handles training of the LSTM model.
+- **predict.py**: Makes predictions using the trained model.
+- **fetch_data.py**: Downloading stock data.
