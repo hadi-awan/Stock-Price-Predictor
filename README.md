@@ -7,15 +7,12 @@ This project implements a Long Short-Term Memory (LSTM) model to predict stock p
 ## Project Structure
 
 - `data/`: Contains stock price data in CSV format.
-- `notebooks/`: Jupyter notebooks for exploratory data analysis.
 - `src/`:
-  - `__init__.py`: Initializes the `src` package.
   - `data_preprocessing.py`: Data preprocessing and preparation.
   - `model.py`: LSTM model definition.
   - `train.py`: Training script for the LSTM model.
   - `predict.py`: Script for making predictions with the trained model.
   - `fetch_data.py`: Script for fetching stock price data from Yahoo Finance.
-  - `utils.py`: Utility functions used across the project.
 - `saved_models/`: Directory for saving trained models.
 - `requirements.txt`: List of dependencies.
 - `README.md`: Project description and instructions.
