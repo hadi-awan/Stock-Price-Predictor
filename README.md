@@ -47,8 +47,8 @@ Use the predict.py script to make predictions with the trained model:
    python src/predict.py
 
 ## Files
-data_preprocessing.py: Contains functions to preprocess the stock price data.
-model.py: Defines the LSTM model architecture.
-train.py: Handles training of the LSTM model.
-predict.py: Makes predictions using the trained model.
-fetch_data.py: Downloading stock data.
+- data_preprocessing.py: Contains functions to preprocess the stock price data.
+- model.py: Defines the LSTM model architecture.
+- train.py: Handles training of the LSTM model.
+- predict.py: Makes predictions using the trained model.
+- fetch_data.py: Downloading stock data.
