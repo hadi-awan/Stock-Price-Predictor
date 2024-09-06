@@ -1,51 +1,57 @@
-# LSTM Stock Price Prediction
+# Stock Price Prediction with LSTM
 
-This project implements an LSTM (Long Short-Term Memory) model using TensorFlow/Keras to predict stock prices based on historical data. The goal is to capture temporal dependencies in stock price movements and make accurate predictions.
+## Overview
 
-## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Data](#data)
-3. [Model Architecture](#model-architecture)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Results](#results)
+This project implements a Long Short-Term Memory (LSTM) model to predict stock prices using historical data. The model is built with TensorFlow and Keras and trained on stock price data retrieved from Yahoo Finance.
 
-## Project Overview
+## Project Structure
 
-This project focuses on building an LSTM model to predict future stock prices based on historical data. The project includes data preprocessing, model building, training, and evaluation.
-
-### Features:
-- Data preprocessing with scaling and splitting
-- LSTM model with dropout to prevent overfitting
-- Hyperparameter optimization
-- Visualization of predicted vs. actual stock prices
-
-## Data
-
-The dataset used for this project contains historical stock prices. Ensure that your data is structured with columns like `Date` and `Close`. The data is stored in the `data/` directory. You can replace `stock_prices.csv` with your dataset.
-
-Note: Large datasets should not be uploaded to GitHub. Use small sample data for demonstration.
-
-## Model Architecture
-
-The model is built using TensorFlow/Keras and consists of two LSTM layers followed by Dense layers. Dropout is used to prevent overfitting. The model is trained on the last 60 days of data to predict the next day's price.
+- `data/`: Contains stock price data in CSV format.
+- `notebooks/`: Jupyter notebooks for exploratory data analysis.
+- `src/`:
+  - `__init__.py`: Initializes the `src` package.
+  - `data_preprocessing.py`: Data preprocessing and preparation.
+  - `model.py`: LSTM model definition.
+  - `train.py`: Training script for the LSTM model.
+  - `predict.py`: Script for making predictions with the trained model.
+  - `fetch_data.py`: Script for fetching stock price data from Yahoo Finance.
+  - `utils.py`: Utility functions used across the project.
+- `saved_models/`: Directory for saving trained models.
+- `requirements.txt`: List of dependencies.
+- `README.md`: Project description and instructions.
 
 ## Installation
 
-To run this project locally, clone the repository and install the required packages:
-
-```bash
-git clone https://github.com/yourusername/LSTM-Stock-Prediction.git
-cd LSTM-Stock-Prediction
-pip install -r requirements.txt
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/stock_price_prediction.git
+   cd stock_price_prediction
+2. Install the required dependencies:
+   pip install -r requirements.txt
 
 ## Usage
 
-You can run the project using the following commands:
+### 1. Download Stock Data
+The data/stock_prices.csv file can be generated using the yfinance library. You can download the data using the provided fetch_data.py script:
 
-1. **Data Preprocessing**: Preprocess the data.
-   ```bash
+Run this script to download data:
+   python src/utils.py
+
+### 2. Preprocess Data
+Run the data_preprocessing.py script to preprocess the data:
    python src/data_preprocessing.py
+
+### 3. Train the Model
+Train the LSTM model using the train.py script:
    python src/train.py
+
+### 4. Make Predictions
+Use the predict.py script to make predictions with the trained model:
    python src/predict.py
 
+## Files
+data_preprocessing.py: Contains functions to preprocess the stock price data.
+model.py: Defines the LSTM model architecture.
+train.py: Handles training of the LSTM model.
+predict.py: Makes predictions using the trained model.
+fetch_data.py: Downloading stock data.
